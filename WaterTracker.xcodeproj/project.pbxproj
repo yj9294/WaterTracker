@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C725643F2B0EE88700CE330E /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = C725643E2B0EE88700CE330E /* FacebookAEM */; };
+		C72564412B0EE88700CE330E /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = C72564402B0EE88700CE330E /* FacebookBasics */; };
+		C72564432B0EE88700CE330E /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = C72564422B0EE88700CE330E /* FacebookCore */; };
+		C72564462B0EE90200CE330E /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = C72564452B0EE90200CE330E /* GoogleMobileAds */; };
+		C789879A2B0DCA780007346E /* GADNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78987992B0DCA780007346E /* GADNativeView.swift */; };
+		C789879C2B0DCB7F0007346E /* GADConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C789879B2B0DCB7F0007346E /* GADConfig.json */; };
+		C789879F2B0DD7570007346E /* GADUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C789879E2B0DD7570007346E /* GADUtil.swift */; };
+		C7A2FCAC2B07411900A9B48F /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A2FCAB2B07411900A9B48F /* RecordView.swift */; };
+		C7B409C72B0B2D0A001533F5 /* DateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B409C62B0B2D0A001533F5 /* DateView.xib */; };
+		C7B409C92B0B522D001533F5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B409C82B0B522D001533F5 /* Notification.swift */; };
+		C7C5BC5C2B07879500FCF9EE /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5BC5B2B07879500FCF9EE /* HistoryView.swift */; };
+		C7D79DE92B04B17B00DEB306 /* WaterTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D79DE82B04B17B00DEB306 /* WaterTrackerApp.swift */; };
+		C7D79DEB2B04B17B00DEB306 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D79DEA2B04B17B00DEB306 /* ContentView.swift */; };
+		C7D79DED2B04B17D00DEB306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D79DEC2B04B17D00DEB306 /* Assets.xcassets */; };
+		C7D79DF02B04B17D00DEB306 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7D79DEF2B04B17D00DEB306 /* Preview Assets.xcassets */; };
+		C7D79DF82B04BECC00DEB306 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C7D79DF72B04BECC00DEB306 /* ComposableArchitecture */; };
+		C7D79DFA2B04C1F800DEB306 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D79DF92B04C1F800DEB306 /* LaunchView.swift */; };
+		C7F5EE592B04CC4700C2F010 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EE582B04CC4700C2F010 /* HomeView.swift */; };
+		C7F5EE5B2B04D24000C2F010 /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EE5A2B04D24000C2F010 /* DrinkView.swift */; };
+		C7F5EE5D2B04D26100C2F010 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EE5C2B04D26100C2F010 /* ChartsView.swift */; };
+		C7F5EE5F2B04D27E00C2F010 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EE5E2B04D27E00C2F010 /* ReminderView.swift */; };
+		C7F5EE612B05F3FB00C2F010 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5EE602B05F3FB00C2F010 /* GoalView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C78987992B0DCA780007346E /* GADNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADNativeView.swift; sourceTree = "<group>"; };
+		C789879B2B0DCB7F0007346E /* GADConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GADConfig.json; sourceTree = "<group>"; };
+		C789879D2B0DD2460007346E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C789879E2B0DD7570007346E /* GADUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADUtil.swift; sourceTree = "<group>"; };
+		C7A2FCAB2B07411900A9B48F /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		C7B409C62B0B2D0A001533F5 /* DateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateView.xib; sourceTree = "<group>"; };
+		C7B409C82B0B522D001533F5 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		C7C5BC5B2B07879500FCF9EE /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		C7D79DE52B04B17B00DEB306 /* WaterTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7D79DE82B04B17B00DEB306 /* WaterTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterTrackerApp.swift; sourceTree = "<group>"; };
+		C7D79DEA2B04B17B00DEB306 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7D79DEC2B04B17D00DEB306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7D79DEF2B04B17D00DEB306 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7D79DF92B04C1F800DEB306 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		C7F5EE582B04CC4700C2F010 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C7F5EE5A2B04D24000C2F010 /* DrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
+		C7F5EE5C2B04D26100C2F010 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		C7F5EE5E2B04D27E00C2F010 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		C7F5EE602B05F3FB00C2F010 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7D79DE22B04B17B00DEB306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72564412B0EE88700CE330E /* FacebookBasics in Frameworks */,
+				C725643F2B0EE88700CE330E /* FacebookAEM in Frameworks */,
+				C72564462B0EE90200CE330E /* GoogleMobileAds in Frameworks */,
+				C7D79DF82B04BECC00DEB306 /* ComposableArchitecture in Frameworks */,
+				C72564432B0EE88700CE330E /* FacebookCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7D79DDC2B04B17B00DEB306 = {
+			isa = PBXGroup;
+			children = (
+				C7D79DE72B04B17B00DEB306 /* WaterTracker */,
+				C7D79DE62B04B17B00DEB306 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7D79DE62B04B17B00DEB306 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7D79DE52B04B17B00DEB306 /* WaterTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7D79DE72B04B17B00DEB306 /* WaterTracker */ = {
+			isa = PBXGroup;
+			children = (
+				C789879D2B0DD2460007346E /* Info.plist */,
+				C7D79DE82B04B17B00DEB306 /* WaterTrackerApp.swift */,
+				C789879B2B0DCB7F0007346E /* GADConfig.json */,
+				C789879E2B0DD7570007346E /* GADUtil.swift */,
+				C7D79DEA2B04B17B00DEB306 /* ContentView.swift */,
+				C78987992B0DCA780007346E /* GADNativeView.swift */,
+				C7D79DF92B04C1F800DEB306 /* LaunchView.swift */,
+				C7F5EE582B04CC4700C2F010 /* HomeView.swift */,
+				C7F5EE5A2B04D24000C2F010 /* DrinkView.swift */,
+				C7F5EE602B05F3FB00C2F010 /* GoalView.swift */,
+				C7A2FCAB2B07411900A9B48F /* RecordView.swift */,
+				C7F5EE5C2B04D26100C2F010 /* ChartsView.swift */,
+				C7C5BC5B2B07879500FCF9EE /* HistoryView.swift */,
+				C7F5EE5E2B04D27E00C2F010 /* ReminderView.swift */,
+				C7B409C62B0B2D0A001533F5 /* DateView.xib */,
+				C7B409C82B0B522D001533F5 /* Notification.swift */,
+				C7D79DEC2B04B17D00DEB306 /* Assets.xcassets */,
+				C7D79DEE2B04B17D00DEB306 /* Preview Content */,
+			);
+			path = WaterTracker;
+			sourceTree = "<group>";
+		};
+		C7D79DEE2B04B17D00DEB306 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C7D79DEF2B04B17D00DEB306 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7D79DE42B04B17B00DEB306 /* WaterTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7D79DF32B04B17D00DEB306 /* Build configuration list for PBXNativeTarget "WaterTracker" */;
+			buildPhases = (
+				C7D79DE12B04B17B00DEB306 /* Sources */,
+				C7D79DE22B04B17B00DEB306 /* Frameworks */,
+				C7D79DE32B04B17B00DEB306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaterTracker;
+			packageProductDependencies = (
+				C7D79DF72B04BECC00DEB306 /* ComposableArchitecture */,
+				C725643E2B0EE88700CE330E /* FacebookAEM */,
+				C72564402B0EE88700CE330E /* FacebookBasics */,
+				C72564422B0EE88700CE330E /* FacebookCore */,
+				C72564452B0EE90200CE330E /* GoogleMobileAds */,
+			);
+			productName = WaterTracker;
+			productReference = C7D79DE52B04B17B00DEB306 /* WaterTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7D79DDD2B04B17B00DEB306 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C7D79DE42B04B17B00DEB306 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = C7D79DE02B04B17B00DEB306 /* Build configuration list for PBXProject "WaterTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7D79DDC2B04B17B00DEB306;
+			packageReferences = (
+				C7D79DF62B04BECC00DEB306 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				C725643D2B0EE88700CE330E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				C72564442B0EE90200CE330E /* XCRemoteSwiftPackageReference "GoogleMobileAds" */,
+			);
+			productRefGroup = C7D79DE62B04B17B00DEB306 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7D79DE42B04B17B00DEB306 /* WaterTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7D79DE32B04B17B00DEB306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C789879C2B0DCB7F0007346E /* GADConfig.json in Resources */,
+				C7B409C72B0B2D0A001533F5 /* DateView.xib in Resources */,
+				C7D79DF02B04B17D00DEB306 /* Preview Assets.xcassets in Resources */,
+				C7D79DED2B04B17D00DEB306 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7D79DE12B04B17B00DEB306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C789879A2B0DCA780007346E /* GADNativeView.swift in Sources */,
+				C7F5EE5D2B04D26100C2F010 /* ChartsView.swift in Sources */,
+				C7A2FCAC2B07411900A9B48F /* RecordView.swift in Sources */,
+				C7F5EE5F2B04D27E00C2F010 /* ReminderView.swift in Sources */,
+				C7D79DEB2B04B17B00DEB306 /* ContentView.swift in Sources */,
+				C7F5EE592B04CC4700C2F010 /* HomeView.swift in Sources */,
+				C7D79DFA2B04C1F800DEB306 /* LaunchView.swift in Sources */,
+				C7F5EE5B2B04D24000C2F010 /* DrinkView.swift in Sources */,
+				C7C5BC5C2B07879500FCF9EE /* HistoryView.swift in Sources */,
+				C7B409C92B0B522D001533F5 /* Notification.swift in Sources */,
+				C7D79DE92B04B17B00DEB306 /* WaterTrackerApp.swift in Sources */,
+				C789879F2B0DD7570007346E /* GADUtil.swift in Sources */,
+				C7F5EE612B05F3FB00C2F010 /* GoalView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C7D79DF12B04B17D00DEB306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7D79DF22B04B17D00DEB306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7D79DF42B04B17D00DEB306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WaterTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 67D9SM7JC3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WaterTracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testbird.WaterTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7D79DF52B04B17D00DEB306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WaterTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 67D9SM7JC3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WaterTracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testbird.WaterTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7D79DE02B04B17B00DEB306 /* Build configuration list for PBXProject "WaterTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7D79DF12B04B17D00DEB306 /* Debug */,
+				C7D79DF22B04B17D00DEB306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7D79DF32B04B17D00DEB306 /* Build configuration list for PBXNativeTarget "WaterTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7D79DF42B04B17D00DEB306 /* Debug */,
+				C7D79DF52B04B17D00DEB306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C725643D2B0EE88700CE330E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
+		C72564442B0EE90200CE330E /* XCRemoteSwiftPackageReference "GoogleMobileAds" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanghits/GoogleMobileAds.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.8.0;
+			};
+		};
+		C7D79DF62B04BECC00DEB306 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C725643E2B0EE88700CE330E /* FacebookAEM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C725643D2B0EE88700CE330E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookAEM;
+		};
+		C72564402B0EE88700CE330E /* FacebookBasics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C725643D2B0EE88700CE330E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookBasics;
+		};
+		C72564422B0EE88700CE330E /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C725643D2B0EE88700CE330E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		C72564452B0EE90200CE330E /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C72564442B0EE90200CE330E /* XCRemoteSwiftPackageReference "GoogleMobileAds" */;
+			productName = GoogleMobileAds;
+		};
+		C7D79DF72B04BECC00DEB306 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7D79DF62B04BECC00DEB306 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C7D79DDD2B04B17B00DEB306 /* Project object */;
+}
