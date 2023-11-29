@@ -12,7 +12,7 @@ import ComposableArchitecture
 struct Drink: Reducer {
     struct State: Equatable {
         static func == (lhs: Drink.State, rhs: Drink.State) -> Bool {
-            lhs.goal == rhs.goal && lhs.record == rhs.record && lhs.ad == rhs.ad && lhs.path == rhs.path
+            lhs.goal == rhs.goal && lhs.record == rhs.record && lhs.path == rhs.path
         }
         @UserDefault(key: "drink.goal")
         var goal: Int?
@@ -21,7 +21,6 @@ struct Drink: Reducer {
         
         var path: StackState<Path.State> = .init()
         
-        var ad: GADNativeViewModel = .none
     }
     
     enum Action: Equatable {
@@ -31,23 +30,13 @@ struct Drink: Reducer {
         case pushGoalView
         case path(StackAction<Path.State, Path.Action>)
         
-        case adUpdate(GADNativeViewModel)
-        
         case popRecordView
     }
     var body: some Reducer<State, Action> {
         Reduce{ state, action in
             switch action {
             case .goalButtonTapped:
-                GADUtil.share.load(.interstitial)
-                let publisher = Future<Action, Never>{ promiss in
-                    GADUtil.share.show(.interstitial) { _ in
-                        promiss(.success(.pushGoalView))
-                    }
-                }
-                return .publisher {
-                    publisher
-                }
+                state.pushGoalView()
             case .pushGoalView:
                 state.pushGoalView()
             case .recordButtonTapped:
@@ -57,15 +46,7 @@ struct Drink: Reducer {
                 case .element(id: _, action: .goal(.pop)):
                     state.popView()
                 case .element(id: _, action: .record(.pop)):
-                    GADUtil.share.load(.interstitial)
-                    let publisher = Future<Action, Never> { promiss in
-                        GADUtil.share.show(.interstitial) { _ in
-                            promiss(.success(.popRecordView))
-                        }
-                    }
-                    return .publisher {
-                        publisher
-                    }
+                    state.popView()
                 case let .element(id: _, action: .goal(.update(goal))):
                     state.updateGoal(goal)
                 case let .element(id: _, action: .record(.update(model))):
@@ -76,8 +57,6 @@ struct Drink: Reducer {
                 default:
                     break
                 }
-            case .adUpdate(let ad):
-                state.updateAD(ad)
             case .popRecordView:
                 state.popView()
             default:
@@ -114,9 +93,6 @@ struct Drink: Reducer {
 }
 
 extension Drink.State {
-    mutating func updateAD(_ ad: GADNativeViewModel) {
-        self.ad = ad
-    }
     
     var drinkValue: Int {
         let ml = (record ?? []).filter { model in
@@ -146,19 +122,16 @@ extension Drink.State {
     mutating func pushGoalView() {
         if !appEnterBackground {
             path.append(.goal(.init(goal: goalValue)))
-            GADUtil.share.disappear(.native)
         }
     }
     mutating func popView() {
         path.removeAll()
-        GADUtil.share.load(.native)
     }
     mutating func updateGoal(_ ret: Int) {
         goal = ret
     }
     mutating func pushRecordView() {
         path.append(.record(.init()))
-        GADUtil.share.disappear(.native)
     }
     mutating func updateRecord(_ model: Record.Model) {
         if record != nil {
@@ -203,9 +176,6 @@ struct DrinkView: View {
                         })
                     }.padding(.top, 30)
                     Spacer()
-                    HStack{
-                        GADNativeView(model: viewStore.ad)
-                    }.frame(height: 124).padding(.horizontal, 20).padding(.bottom, 30)
                 }.background(Image("drink_bg").resizable().ignoresSafeArea())
             }
         }

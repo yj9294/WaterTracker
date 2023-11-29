@@ -17,13 +17,11 @@ struct Charts: Reducer {
         var leftSource = Array(0..<7)
         var path: StackState<Path.State> = .init()
         
-        var ad: GADNativeViewModel = .none
     }
     enum Action: Equatable {
         case itemSelected(State.Itme)
         case historyButtonTapped
         case path(StackAction<Path.State, Path.Action>)
-        case adUpdate(GADNativeViewModel)
     }
     
     var body: some Reducer<State, Action> {
@@ -35,8 +33,6 @@ struct Charts: Reducer {
                 state.pushHistoryView()
             case .path(.element(id: _, action: .history(.pop))):
                 state.popView()
-            case .adUpdate(let ad):
-                state.updateAD(ad)
             default:
                 break
             }
@@ -73,10 +69,6 @@ struct Charts: Reducer {
 }
 
 extension Charts.State {
-    
-    mutating func updateAD(_ ad: GADNativeViewModel) {
-        self.ad = ad
-    }
     
     mutating func pushHistoryView() {
         path.append(.history(.init(source: source)))
@@ -253,9 +245,6 @@ struct ChartsView: View {
                         RightView(state: viewStore.state)
                     }.font(.system(size: 12))
                     Spacer()
-                    HStack{
-                        GADNativeView(model: viewStore.ad)
-                    }.frame(height: 124).padding(.horizontal, 20).padding(.bottom, 30)
                 }
                 .background(Color("#F8FFF9"))
             }.navigationBarBackButtonHidden().navigationBarTitleDisplayMode(.inline)

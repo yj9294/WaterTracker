@@ -27,7 +27,6 @@ struct Home: Reducer {
         case drink(Drink.Action)
         case charts(Charts.Action)
         case reminder(Reminder.Action)
-        case updateImpressionDateWithAD(_ ad: GADNativeModel)
     }
     var body: some Reducer<State, Action> {
         BindingReducer()
@@ -39,34 +38,6 @@ struct Home: Reducer {
                     state.charts.source = record
                 default:
                     break
-                }
-            case let .updateImpressionDateWithAD(ad):
-                if state.dates == nil {
-                    state.dates = [:]
-                }
-                var date: [String: Date] = state.dates!
-                if (date[state.item.rawValue] ?? Date(timeIntervalSinceNow: -11)).timeIntervalSinceNow < -10 {
-                    date[state.item.rawValue] = Date()
-                    switch state.item {
-                    case .drink:
-                        state.dates = date
-                        return .run { send in
-                            await send(.drink(.adUpdate(GADNativeViewModel(model: ad))))
-                        }
-                    case .charts:
-                        state.dates = date
-                        return .run { send in
-                            await send(.charts(.adUpdate(GADNativeViewModel(model: ad))))
-                        }
-                    default:
-                        state.dates = date
-                        return .run { send in
-                            await send(.reminder(.adUpdate(GADNativeViewModel(model: ad))))
-                        }
-                    }
-                    
-                } else {
-                    debugPrint("[AD] \(state.item.rawValue)广告刷新间隔10s")
                 }
             default:
                 break
@@ -117,18 +88,6 @@ struct HomeView: View {
                         getTabItem(.reminder, in: viewStore.state)
                     }.tag(Home.State.Item.reminder)
                 })
-            }.onReceive(NotificationCenter.default.publisher(for: .nativeUpdate), perform: { noti in
-                if let ad = noti.object as? GADNativeModel {
-                    viewStore.send(.updateImpressionDateWithAD(ad))
-                } else {
-                    viewStore.send(.drink(.adUpdate(.none)))
-                    viewStore.send(.charts(.adUpdate(.none)))
-                    viewStore.send(.reminder(.adUpdate(.none)))
-                }
-            }).onChange(of: viewStore.item) { _ in
-                GADUtil.share.disappear(.native)
-                GADUtil.share.load(.native)
-                GADUtil.share.load(.interstitial)
             }
         }
     }

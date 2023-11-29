@@ -28,7 +28,7 @@ struct WaterTracker: Reducer {
                 switch action {
                 case .onAppear:
                     state.goLaunching()
-                case .closedOpenAD:
+                case .stop:
                     state.goLaunched()
                 default:
                     break
@@ -60,9 +60,6 @@ extension WaterTracker.State {
     }
     mutating func goLaunched() {
         state = .launched
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            GADUtil.share.load(.native)
-        }
     }
     mutating func goLaunching() {
         state = .launching
@@ -84,7 +81,6 @@ struct WaterTrackerView: View {
             }).onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification), perform: { _ in
                 viewStore.send(.launching(.onAppear))
             }).onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification), perform: { _ in
-                GADUtil.share.dismiss()
                 viewStore.send(.launching(.stop))
                 viewStore.send(.enterbackground)
             }).onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in

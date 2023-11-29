@@ -20,24 +20,16 @@ struct Launch: Reducer {
         case onAppear
         case update
         case stop
-        case checkOpenAD
-        case showOpenAD
-        case closedOpenAD
     }
     var body: some Reducer<State, Action> {
         Reduce{ state, action in
             switch action {
             case .onAppear:
                 state.progress = 0
-                state.duration = 12.5
-                GADUtil.share.requestConfig()
-                GADUtil.share.load(.open)
-                GADUtil.share.load(.interstitial)
-                GADUtil.share.load(.native)
+                state.duration = 2.5
                 return .run { send in
                     for await _ in clock.timer(interval: .milliseconds(20)) {
                         await send(.update)
-                        await send(.checkOpenAD)
                     }
                 }.cancellable(id: CancelID.timer)
             case .update:
@@ -47,26 +39,10 @@ struct Launch: Reducer {
                     state.progress = 1.0
                     return .run { send in
                         await send(.stop)
-                        await send(.showOpenAD)
                     }
-                }
-            case .checkOpenAD:
-                if GADUtil.share.isLoaded(.open), state.progress > 0.2 {
-                    state.duration = 0.5
                 }
             case .stop:
                 return .cancel(id: CancelID.timer)
-            case .showOpenAD:
-                let publisher = Future<Launch.Action, Never>{ promiss in
-                    GADUtil.share.show(.open) { _ in
-                        promiss(.success(.closedOpenAD))
-                    }
-                }
-                return .publisher {
-                    publisher
-                }
-            case .closedOpenAD:
-                break
             }
             return .none
         }

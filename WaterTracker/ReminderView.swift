@@ -12,7 +12,7 @@ import ComposableArchitecture
 struct Reminder: Reducer {
     struct State: Equatable {
         static func == (lhs: Reminder.State, rhs: Reminder.State) -> Bool {
-            lhs.source == rhs.source && lhs.picker == rhs.picker && lhs.showPickerView == rhs.showPickerView && lhs.ad == rhs.ad
+            lhs.source == rhs.source && lhs.picker == rhs.picker && lhs.showPickerView == rhs.showPickerView
         }
         
         @UserDefault(key: "reminder.list")
@@ -22,15 +22,12 @@ struct Reminder: Reducer {
         
         var picker: DatePicker.State = .init()
         
-        var ad: GADNativeViewModel = .none
-        
     }
     enum Action: Equatable {
         case addButtonTapped
         case deleteButtonTapped(String)
         
         case picker(DatePicker.Action)
-        case adUpdate(GADNativeViewModel)
     }
     var body: some Reducer<State, Action> {
         Reduce{ state, action in
@@ -44,8 +41,6 @@ struct Reminder: Reducer {
             case let .picker(.dateSaveButtonTapped(item)):
                 state.showPickerView = false
                 state.addItem(item)
-            case .adUpdate(let ad):
-                state.updateAD(ad)
             }
             return .none
         }
@@ -56,9 +51,6 @@ struct Reminder: Reducer {
 }
 
 extension Reminder.State {
-    mutating func updateAD(_ ad: GADNativeViewModel) {
-        self.ad = ad
-    }
     
     var sourceValue: [String] {
         source ?? ["08:00", "10:00", "12:00", "14:00", "16:00", "18:00"]
@@ -121,9 +113,6 @@ struct ReminderView: View {
                         }
                     }
                     Spacer()
-                    HStack{
-                        GADNativeView(model: viewStore.ad)
-                    }.frame(height: 124).padding(.horizontal, 20).padding(.bottom, 30)
                 }
             }
         }

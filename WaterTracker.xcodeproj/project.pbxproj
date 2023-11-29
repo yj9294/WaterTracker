@@ -11,9 +11,6 @@
 		C72564412B0EE88700CE330E /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = C72564402B0EE88700CE330E /* FacebookBasics */; };
 		C72564432B0EE88700CE330E /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = C72564422B0EE88700CE330E /* FacebookCore */; };
 		C72564462B0EE90200CE330E /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = C72564452B0EE90200CE330E /* GoogleMobileAds */; };
-		C789879A2B0DCA780007346E /* GADNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78987992B0DCA780007346E /* GADNativeView.swift */; };
-		C789879C2B0DCB7F0007346E /* GADConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C789879B2B0DCB7F0007346E /* GADConfig.json */; };
-		C789879F2B0DD7570007346E /* GADUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C789879E2B0DD7570007346E /* GADUtil.swift */; };
 		C7A2FCAC2B07411900A9B48F /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A2FCAB2B07411900A9B48F /* RecordView.swift */; };
 		C7B409C72B0B2D0A001533F5 /* DateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B409C62B0B2D0A001533F5 /* DateView.xib */; };
 		C7B409C92B0B522D001533F5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B409C82B0B522D001533F5 /* Notification.swift */; };
@@ -32,10 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C78987992B0DCA780007346E /* GADNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADNativeView.swift; sourceTree = "<group>"; };
-		C789879B2B0DCB7F0007346E /* GADConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GADConfig.json; sourceTree = "<group>"; };
 		C789879D2B0DD2460007346E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C789879E2B0DD7570007346E /* GADUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADUtil.swift; sourceTree = "<group>"; };
 		C7A2FCAB2B07411900A9B48F /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		C7B409C62B0B2D0A001533F5 /* DateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateView.xib; sourceTree = "<group>"; };
 		C7B409C82B0B522D001533F5 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -90,10 +84,7 @@
 			children = (
 				C789879D2B0DD2460007346E /* Info.plist */,
 				C7D79DE82B04B17B00DEB306 /* WaterTrackerApp.swift */,
-				C789879B2B0DCB7F0007346E /* GADConfig.json */,
-				C789879E2B0DD7570007346E /* GADUtil.swift */,
 				C7D79DEA2B04B17B00DEB306 /* ContentView.swift */,
-				C78987992B0DCA780007346E /* GADNativeView.swift */,
 				C7D79DF92B04C1F800DEB306 /* LaunchView.swift */,
 				C7F5EE582B04CC4700C2F010 /* HomeView.swift */,
 				C7F5EE5A2B04D24000C2F010 /* DrinkView.swift */,
@@ -188,7 +179,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C789879C2B0DCB7F0007346E /* GADConfig.json in Resources */,
 				C7B409C72B0B2D0A001533F5 /* DateView.xib in Resources */,
 				C7D79DF02B04B17D00DEB306 /* Preview Assets.xcassets in Resources */,
 				C7D79DED2B04B17D00DEB306 /* Assets.xcassets in Resources */,
@@ -202,7 +192,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C789879A2B0DCA780007346E /* GADNativeView.swift in Sources */,
 				C7F5EE5D2B04D26100C2F010 /* ChartsView.swift in Sources */,
 				C7A2FCAC2B07411900A9B48F /* RecordView.swift in Sources */,
 				C7F5EE5F2B04D27E00C2F010 /* ReminderView.swift in Sources */,
@@ -213,7 +202,6 @@
 				C7C5BC5C2B07879500FCF9EE /* HistoryView.swift in Sources */,
 				C7B409C92B0B522D001533F5 /* Notification.swift in Sources */,
 				C7D79DE92B04B17B00DEB306 /* WaterTrackerApp.swift in Sources */,
-				C789879F2B0DD7570007346E /* GADUtil.swift in Sources */,
 				C7F5EE612B05F3FB00C2F010 /* GoalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,8 +27,6 @@ struct WaterTrackerApp: App {
     class Appdelegate: NSObject, UIApplicationDelegate {
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             NotificationHelper.shared.register()
-            GADUtil.share.requestConfig()
-            GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "8dcd760fb10a755bc2d2e470c07a9e34"]
             if let array = UserDefaults.standard.getObject([String].self, forKey: "reminder.list") {
                 array.forEach { item in
                     NotificationHelper.shared.appendReminder(item)
