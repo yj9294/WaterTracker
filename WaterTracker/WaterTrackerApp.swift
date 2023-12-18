@@ -7,7 +7,6 @@
 
 import SwiftUI
 import FBSDKCoreKit
-import GoogleMobileAds
 import ComposableArchitecture
 import AppTrackingTransparency
 

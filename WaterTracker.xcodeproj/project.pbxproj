@@ -10,7 +10,6 @@
 		C725643F2B0EE88700CE330E /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = C725643E2B0EE88700CE330E /* FacebookAEM */; };
 		C72564412B0EE88700CE330E /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = C72564402B0EE88700CE330E /* FacebookBasics */; };
 		C72564432B0EE88700CE330E /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = C72564422B0EE88700CE330E /* FacebookCore */; };
-		C72564462B0EE90200CE330E /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = C72564452B0EE90200CE330E /* GoogleMobileAds */; };
 		C7A2FCAC2B07411900A9B48F /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A2FCAB2B07411900A9B48F /* RecordView.swift */; };
 		C7B409C72B0B2D0A001533F5 /* DateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B409C62B0B2D0A001533F5 /* DateView.xib */; };
 		C7B409C92B0B522D001533F5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B409C82B0B522D001533F5 /* Notification.swift */; };
@@ -54,7 +53,6 @@
 			files = (
 				C72564412B0EE88700CE330E /* FacebookBasics in Frameworks */,
 				C725643F2B0EE88700CE330E /* FacebookAEM in Frameworks */,
-				C72564462B0EE90200CE330E /* GoogleMobileAds in Frameworks */,
 				C7D79DF82B04BECC00DEB306 /* ComposableArchitecture in Frameworks */,
 				C72564432B0EE88700CE330E /* FacebookCore in Frameworks */,
 			);
@@ -130,7 +128,6 @@
 				C725643E2B0EE88700CE330E /* FacebookAEM */,
 				C72564402B0EE88700CE330E /* FacebookBasics */,
 				C72564422B0EE88700CE330E /* FacebookCore */,
-				C72564452B0EE90200CE330E /* GoogleMobileAds */,
 			);
 			productName = WaterTracker;
 			productReference = C7D79DE52B04B17B00DEB306 /* WaterTracker.app */;
@@ -163,7 +160,6 @@
 			packageReferences = (
 				C7D79DF62B04BECC00DEB306 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				C725643D2B0EE88700CE330E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
-				C72564442B0EE90200CE330E /* XCRemoteSwiftPackageReference "GoogleMobileAds" */,
 			);
 			productRefGroup = C7D79DE62B04B17B00DEB306 /* Products */;
 			projectDirPath = "";
@@ -334,28 +330,31 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20231203;
 				DEVELOPMENT_ASSET_PATHS = "\"WaterTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = 67D9SM7JC3;
+				DEVELOPMENT_TEAM = KPZJT4H8LJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaterTracker/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.testbird.WaterTracker;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watertracker.iosheather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -365,28 +364,31 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20231203;
 				DEVELOPMENT_ASSET_PATHS = "\"WaterTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = 67D9SM7JC3;
+				DEVELOPMENT_TEAM = KPZJT4H8LJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaterTracker/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.testbird.WaterTracker;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watertracker.iosheather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -422,14 +424,6 @@
 				minimumVersion = 14.1.0;
 			};
 		};
-		C72564442B0EE90200CE330E /* XCRemoteSwiftPackageReference "GoogleMobileAds" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/quanghits/GoogleMobileAds.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.8.0;
-			};
-		};
 		C7D79DF62B04BECC00DEB306 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -455,11 +449,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C725643D2B0EE88700CE330E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookCore;
-		};
-		C72564452B0EE90200CE330E /* GoogleMobileAds */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C72564442B0EE90200CE330E /* XCRemoteSwiftPackageReference "GoogleMobileAds" */;
-			productName = GoogleMobileAds;
 		};
 		C7D79DF72B04BECC00DEB306 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;

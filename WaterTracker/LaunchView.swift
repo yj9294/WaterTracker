@@ -63,9 +63,3 @@ struct LaunchView: View {
         }.background(Image("launch_bg").resizable().ignoresSafeArea())
     }
 }
-
-#Preview {
-    LaunchView(store: Store.init(initialState: Launch.State(), reducer: {
-        Launch()
-    }))
-}

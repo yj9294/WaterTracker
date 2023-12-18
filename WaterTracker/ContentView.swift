@@ -89,9 +89,3 @@ struct WaterTrackerView: View {
         }
     }
 }
-
-#Preview {
-    WaterTrackerView(store: Store.init(initialState: WaterTracker.State(), reducer: {
-        WaterTracker()
-    }))
-}

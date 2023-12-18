@@ -96,9 +96,3 @@ struct HomeView: View {
         Image(store.item == item ? item.rawValue + "_1" : item.rawValue)
     }
 }
-
-#Preview {
-    HomeView(store: Store.init(initialState: Home.State(), reducer: {
-        Home()
-    }))
-}

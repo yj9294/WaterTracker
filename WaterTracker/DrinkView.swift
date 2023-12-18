@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import ComposableArchitecture
+import AppTrackingTransparency
 
 struct Drink: Reducer {
     struct State: Equatable {
@@ -177,6 +178,9 @@ struct DrinkView: View {
                     }.padding(.top, 30)
                     Spacer()
                 }.background(Image("drink_bg").resizable().ignoresSafeArea())
+            }.onAppear{
+                ATTrackingManager.requestTrackingAuthorization { _ in
+                }
             }
         }
     }
@@ -365,11 +369,3 @@ extension UserDefaults {
     }
 }
 
-
-#Preview {
-    NavigationView{
-        DrinkView(store: Store.init(initialState: Drink.State(), reducer: {
-            Drink()
-        }))
-    }
-}

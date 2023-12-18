@@ -57,7 +57,7 @@ struct HistoryView: View {
             }
             .background(Image("goal_bg").resizable().ignoresSafeArea())
             .toolbar(content: {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {viewStore.send(.pop)}, label: {
                         Image("back")
                     })

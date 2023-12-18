@@ -104,7 +104,7 @@ struct GoalView: View {
             }
             .background(Image("goal_bg").resizable().ignoresSafeArea())
             .toolbarRole(.navigationStack).toolbar(content: {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {viewStore.send(.pop)}, label: {
                         Image("back")
                     })
@@ -116,13 +116,5 @@ struct GoalView: View {
                 Image("goal_title")
             }
         })
-    }
-}
-
-#Preview {
-    NavigationView{
-        GoalView(store: Store.init(initialState: Goal.State(goal: 2000), reducer: {
-            Goal()
-        }))
     }
 }

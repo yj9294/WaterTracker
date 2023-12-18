@@ -93,7 +93,7 @@ struct RecordView: View {
                 SaveButton(store: store)
                 Spacer()
             }.background(Color("#F8FFF9")).toolbarRole(.navigationStack).toolbar(content: {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {viewStore.send(.pop)}, label: {
                         Image("back")
                     })
@@ -220,12 +220,4 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
-}
-
-#Preview {
-    NavigationView{
-        RecordView(store: Store.init(initialState: Record.State(), reducer: {
-            Record()
-        }))
-    }
 }

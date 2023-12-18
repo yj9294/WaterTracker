@@ -268,11 +268,3 @@ extension DateView: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 }
 
-
-#Preview {
-    NavigationView {
-        ReminderView(store: Store.init(initialState: Reminder.State(), reducer: {
-            Reminder()
-        }))
-    }
-}

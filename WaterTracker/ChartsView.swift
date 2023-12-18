@@ -325,8 +325,3 @@ struct ChartsView: View {
     }
 }
 
-#Preview {
-    ChartsView(store: Store.init(initialState: Charts.State(), reducer: {
-        Charts()
-    }))
-}
